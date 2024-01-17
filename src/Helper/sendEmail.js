@@ -4,7 +4,7 @@ import nodemailer from "nodemailer";
 
 export const sendEmail = async ({ email, emailType, userId }) => {
 	try {
-		const hashedId = await bcryptjs.hash(userId.tostring(), 10);
+		const hashedId = await bcryptjs.hash(userId.toString(), 10);
 
 		if (emailType === "verify") {
 			await User.findOneAndUpdate(userId, { verifyToken: hashedId, verifyTokenExpirey: Date.now() + 3600000 });
@@ -12,11 +12,13 @@ export const sendEmail = async ({ email, emailType, userId }) => {
 			await User.findOneAndUpdate(userId, { resetToken: hashedId, resetTokenExpirey: Date.now() + 3600000 });
 		}
 
+		// xyxl arbw xqpu rbkz
+
 		const mailOptions = {
 			from: "taimoor ali",
 			to: email,
 			subject: emailType === "verify" ? "verify your email" : "reset your password",
-			html: `<p>click<a>
+			html: `<p>click<a
               href="http://localhost:3000/verifyemail?token=${hashedId}">
               here
               </a> to 
@@ -24,11 +26,11 @@ export const sendEmail = async ({ email, emailType, userId }) => {
 		};
 
 		const transport = nodemailer.createTransport({
-			host: "sandbox.smtp.mailtrap.io",
-			port: 2525,
+			host: "smtp.gmail.com",
+			port: 587,
 			auth: {
-				user: "04f980b7dd0682",
-				pass: "626da313c44f28",
+				user: "taimoorali6786@gmail.com",
+				pass: "xyxl arbw xqpu rbkz",
 			},
 		});
 

@@ -13,8 +13,6 @@ export default function Login() {
 	const [email, setEmail] = useState("");
 	const [data, setData] = useState(null);
 
-	// useEffect(() => {}, []);
-
 	async function handleSubmit(e) {
 		e.preventDefault();
 		setLoading(true);
@@ -23,8 +21,10 @@ export default function Login() {
 			const res = await axios.post(baseURL + "/forgetpassword", { email });
 			toast.success(res.data.msg);
 			setData(res.data.user);
+			console.log(res);
 		} catch (error) {
 			console.log(error);
+			setData(null);
 			toast.error(error.response?.data?.msg || error.data?.msg || "something went wrong");
 		} finally {
 			setLoading(false);
