@@ -54,7 +54,7 @@ export default function VerifyEmail() {
         <h1 className="text-3xl font-bold text-neutral-800">Oops!</h1>{" "}
         <p className="text-sm font-medium text-neutral-600">
           Something went wrong... <br />
-          we can't verify your email right now!
+          could not verify your email!
         </p>
       </div>
     );

@@ -131,7 +131,7 @@ export default function Login() {
           <Button text="Login" loading={loading} />
 
           <div className="flex flex-col gap-2.5 py-3 text-center">
-            <span>Don't have an account?</span>
+            <span>Create a new account</span>
             <Link
               href="/Auth/register"
               className="border-2 py-2 rounded border-zinc-700 font-medium hover:text-white hover:border-zinc-800 hover:bg-zinc-800 transition-all duration-300 ease-out"
