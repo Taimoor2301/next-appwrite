@@ -25,6 +25,7 @@ export async function POST(req) {
 			{ status: 200 }
 		);
 
+
 		response.cookies.set("accessToken", token, { httpOnly: true });
 		return response;
 	} catch (error) {
