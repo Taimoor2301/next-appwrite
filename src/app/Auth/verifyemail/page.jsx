@@ -8,7 +8,7 @@ import { baseURL } from "src/lib/baseURL";
 import { motion } from "framer-motion";
 import Spinner from "src/components/Spinner";
 
-export default function page() {
+export default function VerifyEmail() {
   const searchParams = useSearchParams();
   const token = searchParams.get("token");
   const router = useRouter();

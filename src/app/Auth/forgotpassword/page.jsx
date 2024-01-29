@@ -9,7 +9,7 @@ import { baseURL } from "src/lib/baseURL";
 import { motion } from "framer-motion";
 import Button from "src/components/Button";
 
-export default function Login() {
+export default function ForgotPassword() {
   const [loading, setLoading] = useState(false);
   const [isEmailFocus, setIsEmailFocus] = useState(false);
   const router = useRouter();

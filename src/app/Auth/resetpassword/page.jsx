@@ -7,7 +7,7 @@ import { baseURL } from "src/lib/baseURL";
 import Button from "src/components/Button";
 import toast from "react-hot-toast";
 
-export default function page() {
+export default function ResetPassword() {
   const [pass1, setPass1] = useState("");
   const [pass2, setPass2] = useState("");
   const [isPassword1Focus, setIsPassword1Focus] = useState(false);

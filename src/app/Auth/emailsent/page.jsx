@@ -3,7 +3,7 @@ import { useSearchParams } from "next/navigation";
 import React from "react";
 import { motion } from "framer-motion";
 
-export default function page() {
+export default function EmailSent() {
   const searchParams = useSearchParams();
   const email = searchParams.get("mail");
   return (
