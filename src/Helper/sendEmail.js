@@ -19,7 +19,7 @@ export const sendEmail = async ({ email, emailType, userId }) => {
 			to: email,
 			subject: emailType === "verify" ? "verify your email" : "reset your password",
 			html: `<p>click<a
-              href="http://localhost:3000/Auth/${emailType === 'verify'?"verifyemail" : "resetpassword"}?token=${hashedId}&linkType=${emailType}">
+              href="https://next-auth-by-taimoor.vercel.app/Auth/${emailType === 'verify'?"verifyemail" : "resetpassword"}?token=${hashedId}&linkType=${emailType}">
               here
               </a> to
             ${emailType === "verify" ? "verify your email" : "reset your password"} </p>`,
