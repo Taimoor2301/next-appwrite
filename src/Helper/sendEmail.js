@@ -19,9 +19,9 @@ export const sendEmail = async ({ email, emailType, userId }) => {
 			to: email,
 			subject: emailType === "verify" ? "verify your email" : "reset your password",
 			html: `<p>click<a
-              href="http://localhost:3000/verifyemail?token=${hashedId}">
+              href="http://localhost:3000/Auth/${emailType === 'verify'?"verifyemail" : "resetpassword"}?token=${hashedId}&linkType=${emailType}">
               here
-              </a> to 
+              </a> to
             ${emailType === "verify" ? "verify your email" : "reset your password"} </p>`,
 		};
 
@@ -29,8 +29,8 @@ export const sendEmail = async ({ email, emailType, userId }) => {
 			host: "smtp.gmail.com",
 			port: 587,
 			auth: {
-				user: "taimoorali6786@gmail.com",
-				pass: "xyxl arbw xqpu rbkz",
+				user: process.env.email_user,
+				pass: process.env.email_pass,
 			},
 		});
 
