@@ -5,7 +5,6 @@ import { useRouter, useSearchParams } from "next/navigation";
 import { useState, useEffect } from "react";
 import toast from "react-hot-toast";
 import { baseURL } from "src/lib/baseURL";
-import { motion } from "framer-motion";
 import Spinner from "src/components/Spinner";
 
 export default function VerifyEmail() {
@@ -42,7 +41,7 @@ export default function VerifyEmail() {
 
   if (loading) {
     content = (
-      <div>
+      <div className="h-full flex justify-center items-center">
         <Spinner width="15px" color="black" />
       </div>
     );
@@ -60,7 +59,7 @@ export default function VerifyEmail() {
     );
   } else {
     content = (
-      <div className="flex flex-col items-center justify-center text-center gap-3">
+      <div className="flex flex-col items-center justify-center text-center gap-3 h-full">
         <h1 className="text-3xl font-bold text-neutral-800">Email Verified!</h1>{" "}
         <p className="text-sm font-medium text-neutral-600">
           Your email has been verified successfully
