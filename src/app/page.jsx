@@ -2,7 +2,7 @@ import LogoutButton from "src/components/LogoutButton";
 
 export default async function Home() {
   return (
-    <div className="w-full bg-white h-full flex gap-10 p-10 justify-center items-center text-center font-bold max-w-7xl mx-auto rounded-md">
+    <div className="w-full bg-white h-full flex flex-col lg:flex-row gap-10 p-10 justify-center items-center text-center font-bold max-w-7xl mx-auto rounded-md">
       <div className="flex-1">
         <img src="/tech.svg" className="max-h-full object-cover" />
       </div>
