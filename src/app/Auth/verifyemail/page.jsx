@@ -11,7 +11,7 @@ export default function VerifyEmail() {
   const searchParams = useSearchParams();
   const token = searchParams.get("token");
   const router = useRouter();
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const [pageError, setPageError] = useState(false);
 
   async function verifyToken() {
@@ -40,14 +40,8 @@ export default function VerifyEmail() {
   let content;
 
   if (loading) {
-    content = (
-      <div className="h-full flex justify-center items-center">
-        <Spinner width="15px" color="black" />
-      </div>
-    );
-  }
-
-  if (pageError) {
+    content = <Spinner width="30px" color="black" />;
+  } else if (pageError) {
     content = (
       <div className="flex flex-col items-center justify-center text-center gap-3">
         <h1 className="text-3xl font-bold text-neutral-800">Oops!</h1>{" "}
@@ -66,14 +60,14 @@ export default function VerifyEmail() {
           <br />
           you will be redirected to login page shortly!
         </p>
-        <Spinner width="15px" color="black" />
+        <Spinner width="30px" color="black" />
       </div>
     );
   }
 
   return (
     <>
-      <section className="bg-white flex-1 w-full h-full flex justify-center items-center">
+      <section className="flex-1 w-full min-h-full flex justify-center items-center">
         {content}
       </section>
     </>

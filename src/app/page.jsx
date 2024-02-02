@@ -7,8 +7,8 @@ export default async function Home() {
         <img src="/tech.svg" className="max-h-full object-cover" />
       </div>
       <div className="flex flex-col flex-1 justify-center items-center">
-        <h1 className="text-6xl">Welcome Home</h1>{" "}
-        <p className="text-sm py-5 w-1/2 text-neutral-600 font-normal">
+        <h1 className="text-3xl lg:text-6xl">Welcome Home</h1>{" "}
+        <p className="text-sm py-5 lg:w-1/2 text-neutral-600 font-normal">
           Next JS Authentication system using JSON Webtoken, Mailing Service and
           more.
         </p>

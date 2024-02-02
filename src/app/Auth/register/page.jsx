@@ -119,14 +119,15 @@ export default function Register() {
                 onBlur={() => setIsPasswordFocus(false)}
                 className="py-2  focus:outline-none bg-transparent"
               />
-              {user.password.length > 0 && (
-                <span
-                  className="flex items-center text-xs"
-                  onClick={() => setTypePass((prev) => !prev)}
-                >
-                  {typePass ? "Show" : "Hide"}
-                </span>
-              )}
+
+              <span
+                className={`flex items-center text-xs transition-opacity duration-300 ${
+                  user.password.length <= 0 && "opacity-0"
+                }`}
+                onClick={() => setTypePass((prev) => !prev)}
+              >
+                {typePass ? "Show" : "Hide"}
+              </span>
             </div>
           </label>
 

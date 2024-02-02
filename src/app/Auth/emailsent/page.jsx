@@ -8,13 +8,12 @@ export default function EmailSent() {
   return (
     <>
       <section className="flex-1 w-full h-full flex flex-col m-auto  text-center justify-center items-center gap-5">
-        <h1 className="text-4xl font-bold text-neutral-800">
-          Thank you for verification!
-        </h1>
+        <h1 className="text-4xl font-bold text-neutral-800">Thank you!</h1>
         <p className="font-medium text-neutral-600">
-          Verification email has bee sent to <br />
+          A verification email has bee sent to
+          <br />
           {email} <br />
-          Please check your email for verification link!
+          Please check your inbox for verification link!
         </p>
       </section>
     </>
