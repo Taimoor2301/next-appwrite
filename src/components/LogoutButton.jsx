@@ -27,9 +27,9 @@ export default function LogoutButton() {
     <button
       disabled={loading}
       onClick={logout}
-      className="w-full max-w-md h-10 rounded-md bg-neutral-800 text-white font-semibold disabled:opacity-80 disabled:cursor-not-allowed"
+      className="w-full max-w-md h-10 flex justify-center items-center rounded-md bg-neutral-800 text-white font-semibold disabled:opacity-80 disabled:cursor-not-allowed"
     >
-      {loading ? <Spinner color="white" /> : "Logout"}
+      {loading ? <Spinner color="white" width="30px" /> : "Logout"}
     </button>
   );
 }
